@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-g8cb%s*9ty3_rp3a1u!cwvltm8ny5=iew3m2_3xzv-z08bo!%6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['abdullahiresume.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['abdullahiresume.herokuapp.com','127.0.0.1','']
 
 
 # Application definition
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dc29qsir98m0u8',
+        'NAME': 'de6clf264ng39j',
         'USER': 'oooiumkdxqreid',
         'PASSWORD': 'c9e4a6bbafb9c0241e01b4f4560c7024abeddba25e476067018a634e3ec6fc18',
         'HOST': 'ec2-54-156-60-12.compute-1.amazonaws.com',
@@ -135,6 +136,7 @@ STATICFILES_DIRS =[
 
 ]
 
+STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage' 
 
 
 # Default primary key field type
