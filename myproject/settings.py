@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+# import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-g8cb%s*9ty3_rp3a1u!cwvltm8ny5=iew3m2_3xzv-z08bo!%6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['abdullahiresume.herokuapp.com','127.0.0.1',]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -129,7 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
 
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static')
@@ -137,11 +136,11 @@ STATICFILES_DIRS =[
 ]
 STATIC_ROOT =   os.path.join(BASE_DIR,'staticfiles')
 
-
+STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
