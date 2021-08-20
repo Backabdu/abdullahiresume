@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-g8cb%s*9ty3_rp3a1u!cwvltm8ny5=iew3m2_3xzv-z08bo!%6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','abdullahiresume.herokuapp.com']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "crispy_forms",
+    
 ]
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
